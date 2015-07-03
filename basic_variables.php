@@ -19,6 +19,13 @@ $variablesObject = (object) $variablesArray;
 $multiDimensionsArray  = array($variablesArray, $variablesArray, "testVar" => 'green');
 $multiDimensionsObject = (object) $multiDimensionsArray;
 
+$iniString = '
+myIniVar=red
+myOtherIniVar=green
+';
+
+$jsonString = '{"jsonVar":"yellow","jsonVar2":"pink"}';
+
 if(JLoader::import('jproofless.jproofless')){
 
 	$joomlaLess = JProofLess::getInstance();
@@ -44,6 +51,15 @@ if(JLoader::import('jproofless.jproofless')){
 
 	// or as multiDimensionsObject
 	$joomlaLess->setVariables($multiDimensionsObject);
+
+	// or as INI formatted string
+	$joomlaLess->setVariables($iniString);
+
+	// or as INI formatted string
+	$joomlaLess->setVariables($iniString);
+
+	// or as JSON formatted string
+	$joomlaLess->setVariables($jsonString);
 
 	$joomlaLess->autoCompile();
 }
