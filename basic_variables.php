@@ -55,9 +55,6 @@ if(JLoader::import('jproofless.jproofless')){
 	// or as INI formatted string
 	$joomlaLess->setVariables($iniString);
 
-	// or as INI formatted string
-	$joomlaLess->setVariables($iniString);
-
 	// or as JSON formatted string
 	$joomlaLess->setVariables($jsonString);
 
